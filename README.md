@@ -1,4 +1,4 @@
-# Amazon-Sales-Analysis
+# E commerce sales analysis
 Amazon Sales Analysis 🛒📊
 An end-to-end data analytics project focused on evaluating Amazon sales performance, revenue drivers, product category trends, and regional order distributions to uncover key business insights and optimization opportunities.
 
