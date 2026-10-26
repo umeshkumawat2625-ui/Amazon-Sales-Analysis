@@ -1,59 +1,128 @@
-# E commerce sales analysis
-Amazon Sales Analysis 🛒📊
-An end-to-end data analytics project focused on evaluating Amazon sales performance, revenue drivers, product category trends, and regional order distributions to uncover key business insights and optimization opportunities.
+# E-Commerce Sales Analysis
 
-📌 Table of Contents
-Overview
+## Project Overview
 
-Project Structure
+This project analyzes retail/e-commerce sales data using **Python, Pandas, and Plotly**. The analysis explores sales and profit over time, compares product categories and sub-categories, and examines performance across customer segments.
 
-Key Business Questions
+The goal is to turn transaction-level data into useful business insights that can help identify sales trends and understand profitability.
 
-Tech Stack & Tools
+## Business Questions
 
-Key Insights & Metrics
+- Which month has the highest and lowest sales?
+- Which product categories generate the highest and lowest sales?
+- How do sales vary across product sub-categories?
+- Which month has the highest profit?
+- How do profit results differ by category and sub-category?
+- How do sales and profit compare across customer segments?
+- What is the relationship between sales and profit?
 
-Dashboard & Visualizations
+## Tools & Libraries
 
-Getting Started
+- **Python** — analysis and scripting
+- **Pandas** — loading, cleaning, transforming, and summarizing tabular data
+- **Plotly Express** — interactive charts
+- **Plotly Graph Objects** — customizable visualizations
+- **Jupyter Notebook** — interactive analysis environment
 
-Contributing
+## Dataset
 
-License
+The notebook loads a file named `Sample - Superstore.csv`. The preview in the notebook shows fields including:
 
-📖 Overview
-The Amazon Sales Analysis project examines e-commerce transaction data to analyze sales volume, order fulfillment channels, product performance, and customer geographic distribution. By processing raw order data into structured dashboards and metrics, this repository serves as a practical guide for e-commerce performance evaluation and inventory decision-making.
+| Field | Description |
+|---|---|
+| `Order Date` | Date the order was placed |
+| `Ship Date` | Date the order was shipped |
+| `Ship Mode` | Shipping method |
+| `Customer ID`, `Customer Name` | Customer identifiers and names |
+| `Segment` | Customer segment |
+| `Country`, `City`, `State`, `Region` | Geographic information |
+| `Category`, `Sub-Category` | Product classification |
+| `Product Name`, `Product ID` | Product details |
+| `Sales` | Sales amount |
+| `Quantity` | Quantity ordered |
+| `Discount` | Discount applied |
+| `Profit` | Profit or loss for the order line |
 
-📂 Project Structure
-Amazon-Sales-Analysis/
-│
-├── data/                         # Raw and processed sales datasets
-├── dashboards/                   # BI dashboard files / export images
-│   └── Amazon Background.jpg    # Custom dashboard background asset
-├── notebooks/                    # Data cleaning & EDA scripts
-├── README.md                     # Project documentation
-└── requirements.txt              # Required dependencies
-🎯 Key Business Questions
-Revenue Breakdown: Which product categories and sub-categories generate the highest total sales volume?
+The notebook preview reports **9,994 records and 21 columns**. The analysis also derives date-related fields such as order month, year, and day for time-based comparisons.
 
-Fulfillment Channel Efficiency: How do sales compare between Amazon-fulfilled (FBA) and Merchant-fulfilled (FBM) orders?
+## Analysis Workflow
 
-Geographic Demand: Which states and regions drive the highest order volume across the marketplace?
+1. **Load the data** from the CSV file with Pandas.
+2. **Review descriptive statistics** to understand numeric fields and their distributions.
+3. **Prepare date fields** for month-, year-, and day-level analysis.
+4. **Aggregate sales and profit** by time period, category, sub-category, and customer segment.
+5. **Visualize patterns** with Plotly charts.
+6. **Compare performance** to identify high- and low-performing periods and product groups.
 
-Order Status Tracking: What percentage of total orders are successfully delivered vs. canceled or returned?
+## Analysis Areas
 
-🛠️ Tech Stack & Tools
-Data Processing & Analysis: Python (pandas, numpy), SQL
+### 1. Monthly Sales
+Compare sales across months and identify the highest- and lowest-sales periods.
 
-Data Visualization: Power BI / Tableau, Python (matplotlib, seaborn)
+### 2. Category and Sub-Category Performance
+Evaluate sales and profit across product categories and their sub-categories.
 
-Reporting & Presentation: MS Excel, Jupyter Notebook
+### 3. Monthly Profit
+Review profit by month to identify periods with stronger profitability.
 
-💡 Key Insights & Metrics
-Category Performance: Identified top-performing categories contributing to the majority of total order volume.
+### 4. Customer Segment Analysis
+Compare sales and profit across customer segments.
 
-Fulfillment Split: Evaluated sales volume differences across fulfillment methods to understand delivery performance.
+### 5. Sales-to-Profit Relationship
+Explore sales alongside profit to better understand profitability. Note that a sales-to-profit ratio should be defined consistently and interpreted carefully when profit is zero or negative.
 
-Geographic Distribution: Mapped top destination states to highlight key regional demand hubs.
+## Repository Structure
 
-Order Fulfillment Rate: Analyzed order lifecycle states to quantify return and cancellation rates.
+```text
+E-Commerce-Sales-Analysis/
+├── README.md
+├── e commerce sales.ipynb
+└── Sample - Superstore.csv
+```
+
+The CSV is referenced by the notebook. Include it in the repository (if licensing permits), or update the notebook's file path to match wherever you store the dataset.
+
+## How to Run
+
+1. Clone or download this repository.
+2. Install Python if it is not already installed.
+3. Install the required libraries:
+
+   ```bash
+   pip install pandas plotly jupyter
+   ```
+
+4. Make sure `Sample - Superstore.csv` is available in the path used by the notebook.
+5. Start Jupyter Notebook:
+
+   ```bash
+   jupyter notebook
+   ```
+
+6. Open `e commerce sales.ipynb` and run the cells.
+
+## Skills Demonstrated
+
+- Exploratory data analysis (EDA)
+- Data loading and transformation with Pandas
+- Date-based analysis
+- Grouped sales and profit analysis
+- Interactive data visualization with Plotly
+- Translating business questions into analytical steps
+
+## Possible Enhancements
+
+- Add a concise findings section with verified results from the notebook.
+- Include screenshots of selected charts.
+- Add data-quality checks for missing values and duplicate records.
+- Document the exact formula used for sales-to-profit ratio.
+- Make chart labels, titles, currency formatting, and axis names consistent.
+
+## Author
+
+**Umesh Kumawat**  
+Data Analytics Portfolio Project
+
+---
+
+*This README describes the analysis questions and workflow documented in the project files. Add specific numerical findings only after verifying them from the notebook outputs.*
